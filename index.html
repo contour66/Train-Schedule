@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+ 
+
+
+
+
+</head>
+<body>
+	<div class="container">
+	    <!-- Jumbotron for Title -->
+	    <div class="jumbotron" style="background-color: #C67113 ; color: white;">
+	      <h1 class="text-center"><strong>Train Schedule</strong></h1>
+	    </div>
+		<div class="row">
+		    <div class="col-sm-12">
+		        <br>
+		        <!-- First panel is for handling the search parameters -->
+		        <div class="panel panel-primary">
+		         	<div class="panel-heading">
+		            	<h3 class="panel-title"><strong><!-- <i class="fa  fa-list-alt"></i> --> Current Train Schedule </strong></h3>
+		          	</div>
+		         	<div class="panel-body">
+						<table class="table" id="train-table">
+		 					
+		    					<tr>
+		      						<th id="trainName">Train Name</th>
+		      						<th id="destination">Destination</th>
+		      						<th id="freq">Frequency (min)</th>
+		      						<th id="nextArrival">Next Arrival</th>
+		      						<th id="minAway">Minutes Away</th>
+		    					</tr>
+		  					
+		  					<!-- <thead id="newTrain">
+		    					<tr id="train-info">
+		      						<th id="trainDisplay"></th>
+		      						<th id="destinationDisplay"></th>
+		      						<th id="freqDisplay"> </th>
+		      						<th id="nextDisplay"></th>
+		      						<th id="minDisplay"></th>
+		    					</tr>
+		  					</thead> -->
+		  				<!-- <tbody>
+		  				</tbody> -->
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <!-- Row for Searching New York Times -->
+	    <div class="row">
+	      	<div class="col-sm-12">
+		        <br>
+		        <!-- First panel is for handling the search parameters -->
+		        <div class="panel panel-primary">
+		          	<div class="panel-heading">
+		            	<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>  Add Train</strong></h3>
+		          	</div>
+		          	<div class="panel-body">
+		            	<!-- Here we create an HTML Form for handling the inputs-->
+		            	<form role="form">
+		              	<!-- Here we capture the number of records that the user wants to retrieve  -->
+		              	<!-- Here we capture the Start Year Parameter-->
+		            		<div class="form-group">
+		                		<label for="start-year">Train Name</label>
+		                		<input type="text" class="form-control" id="train-name-input">
+		            		</div>
+
+		             		<!-- Here we capture the End Year Parameter -->
+		            		<div class="form-group">
+		                		<label for="end-year">Destination</label>
+		                		<input type="text" class="form-control" id="destination-input">
+		            		</div>
+
+		             		<!-- Here we create the text box for capturing the search term-->
+		            		<div class="form-group">
+		                		<label for="search">First Train Time (HH:mm - military time)</label>
+		                		<input type="text" class="form-control" id="first-train-input">
+		            		</div>
+
+		             		<div class="form-group">
+		                		<label for="search">Frequency (min)</label>
+		                		<input type="text" class="form-control" id="frequency-input">
+		            		</div>
+
+		             		 <!-- Here we have our final submit button -->
+		             		<button type="submit" class="btn btn-default" id="run-search"><i class="fa fa-search"></i> Submit</button>
+		             		<!--  <button type="button" class="btn btn-default" id="clear-all"><i class="fa fa-trash"></i> Clear Results</button> -->
+		            	<!-- <table id="train">
+
+		            		
+		            	</table>
+ -->
+		            	</form>
+
+		       	 	</div>
+		    	</div>
+		    </div>
+		</div>
+	    <!-- Footer Region -->
+	    <div class="row">
+	    	<div class="col-sm-12">
+	        	<!-- Line Break followed by closing -->
+	       		<hr>
+	       		<!--  <h5 class="text-center"><small>Made by Ahmed with lots and lots of <i class="fa fa-heart"></i></small></h5> -->
+	      	</div>
+	    </div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>  
+      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</body>
+</html>
